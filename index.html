@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+  <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+<body>
+
+  <main id="mainParent">
+    <section class="switching_control">
+
+      <div class="control_container">
+
+        <div class="control_1">
+          <button class="stepsA">1</button>
+          <ul class="steps_labee">
+            <li>Step 1</li>
+            <li>Your info</li>
+          </ul>
+
+        </div>
+
+        <div class="control_2">
+          <button class="stepsB">2</button>
+          <ul class="steps_labee">
+            <li>Step 2</li>
+            <li>Select plan</li>
+          </ul>
+        </div>
+
+        <div class="control_3">
+          <button class="stepsC">3</button>
+          <ul class="steps_labee">
+            <li>Step 3</li>
+            <li>Add-ons</li>
+          </ul>
+        </div>
+
+        <div class="control_4">
+          <button class="stepsD">4</button>
+          <ul class="steps_labee">
+            <li>Step 4</li>
+            <li>Summary</li>
+          </ul>
+        </div>
+
+        
+    
+      </div>
+    </section>
+
+
+
+    <section class="form_section">
+
+      <div class="centering_form">
+
+        <form class="fORM">
+
+
+          <div class="formField">
+  
+            <h1 id="head1">Personal info</h1>
+            <p id="description_for_form1">Please provide your name, email address, and phone number.</p>
+            <div class="namecontrol">
+              <div class="label_e">
+                <label for="fullName">Name</label>
+                <p id="error_messn">This field is required</p>
+              </div>
+              <input id="fullName" type="text" placeholder="e.g Stephen King">
+            </div>
+  
+            <div class="mailcontrol">
+              <div class="label_e">
+               <label for="mAIL"> Email Address</label>
+                <p id="error_messm">This field is required</p>
+              </div>
+               <input id="mAIL" type="mail" placeholder="e.g stephenking@lorem.com">
+            </div>
+  
+           <div class="numbercontrol">
+              <div class="label_e">
+                <label for="number">Phone Number</label>
+                <p id="error_messp">This field is required</p>
+              </div>
+                <input id="number" type="number" placeholder="e.g  e.g. +1 234 567 890">
+            </div>
+          </div>
+  
+  
+          <div class="next_button_container">
+            <button id="exit-step1" type="submit">Next Step</button>
+          </div>
+  
+       
+  
+        </form>
+
+      </div>
+
+
+    </section>
+ 
+
+    <section class="step-two" id="totwoo">
+
+      <div class="selectionfield">
+
+        
+
+
+
+        <h2 id="plans_head"> Select your plan</h2>
+
+        <p id="options">You have the option of monthly or yearly billing.</p>
+
+        <div class="plans_container">
+      
+          <div  class="two_options A"  id="arcade">
+
+            <img id="arcade_icon" src="./assets/images/icon-arcade.svg">
+            <ul class="name_price1">
+              <li id="name_of_optionA">Arcade</li>
+              <li id="priceA">$9/mo</li>
+            </ul>
+          </div>
+
+          <div class="two_options B" id="advance">
+
+            <img id="advance_icon" src="./assets/images/icon-advanced.svg">
+            <ul class="name_price2">
+              <li id="name_of_optionAd">Advanced</li>
+              <li id="priceAd">$12/mo</li>
+            </ul>
+          </div>
+
+          <div  class="two_options C" id="pro">
+
+            <img id="advance_icon" src="./assets/images/icon-pro.svg">
+            <ul class="name_price3">
+              <li id="name_of_optionP">Pro</li>
+              <li id="priceP">$15/mo</li>
+            </ul>
+          </div>
+
+        </div> 
+
+        
+        <div class="duration_container">
+
+          <p class="monthtly_step2">Monthly</p>
+
+          <div class="swither_container">
+            <button class="choseperiod M" id="month_button"></button>
+            <button class="choseperiod y" id="yearly_button"></button>
+          </div>
+
+          <p class="yearly_step2">Yearly</p>
+        </div>
+
+      </div>
+
+      
+      <div class="switch_step1_or_tep2">
+        <button id="back_to_one">Go Back</button>
+        <button id="to_step_three">Next Step</button> 
+      </div>
+
+    </section> 
+
+
+
+
+
+
+    <section class="ADS-ON">
+
+      <div class="adsonselectionField">
+        <h2 id="ads-on_head">Pick add-ons</h2>
+        <p id="ads-on-benefit">Add-ons help enhance your gaming experience.</p>
+  
+        <div class="oPtions_container">
+          <div class="online_service">
+  
+            <div class="inner">
+  
+              <button class="mark_divA"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path id="mark1" fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg></button>
+    
+              <ul class="o_service">
+    
+                <li id="titleOS">Online service</li>
+                <li id="benefit">Access to multiplayer game</li>
+    
+              </ul>
+            </div>
+  
+            <span id="step_3_cost"></span>
+            
+          </div>
+          <div class="large_storage">
+  
+            <div class="inner">
+  
+              <button class="mark_divB"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path id="mark2" fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg></button>
+              
+              <ul class="l_storage">
+    
+                <li id="titleLS">Larger storage</li>
+                <li id="benefitLS">Extra 1TB of cloud save</li>
+    
+              </ul>
+            </div>
+  
+            <span id="step_3_costLS"></span>
+  
+          </div>
+          <div class="costimizable">
+  
+            <div class="inner">
+              <button class="mark_divC"><svg  xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path id="mark3" fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg></button>
+              <ul class="l_customizable_p">
+    
+                <li id="titleCP">Customizable Profile</li>
+                <li id="benefitCP">Custom theme on your profile</li>
+    
+              </ul>
+            </div>
+  
+            <span id="step_3_costC"></span>
+  
+          </div>
+  
+        </div>
+
+      </div>
+      <div class="step_button">
+        <button id="back_to_2"> Go Back</button>
+        <button id="next_from_three">Next Step</button>
+     </div>
+    </section>
+
+    <section class="step4">
+
+      <div class="summaryOfselection">
+
+
+
+
+
+        <h4>Finishing up</h4>
+        <p id="check_instruction">Double-check everything looks OK before confirming.</p>
+
+        <div class="filled_selected_for_all_steps">
+          <div class="selected_plans">
+            <div class="plsns_coNTainer">
+              <div > <span id="pLaN"></span>
+                <span id="specp"></span>
+              </div>
+              <span id = "pLaN_PrIcE"></span>
+            </div>
+            <a href="#totwoo" id = "beginchange-from-two">Change</a>
+          </div>
+          <div class="step_three_selected">
+
+            <div class="services">
+              <span id="retriever1"></span>
+              <span id="service_price"></span>
+            </div>
+
+            <div class="storage_selected">
+              <span id="retriever2"></span>
+              <span id="storage_price"></span>
+            </div>
+
+             <div class="customiZe_selected">
+              <span id="retriever3"></span>
+              <span id="cus_pRICE"></span>
+             </div>
+          </div>
+        </div>
+
+        <div class="centeringdiv">
+
+          <div class="total_cost_container">
+            <p id="total_cost_perperiod"><span id="totalPerod">(per month)</span></p>
+            <span id = "total_cost_price"></span>
+          </div>
+          
+        </div>
+
+
+      </div>
+
+      <div class="next_to_final_or_back_button_container">
+        <button id="bact_to_three">Go Back</button>
+        <button id="to_summary">Confirm</button>
+      </div>
+
+
+    </section>
+
+    <section class="final">
+      <div class="summary_Holder">
+        <div class="iconcontainer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="none"><circle cx="40" cy="40" r="40" fill="#F9818E"/><path fill="#E96170" d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z"/><path fill="#FFF" d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z"/></g></svg>
+        </div>
+        <h5>Thank you!</h5>
+        <p id = "appreciation">
+          Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.
+        </p>
+      </div>
+    </section>
+    
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> Olasunkanmi Oluwatimileyin</a>.
+  </div>
+
+  <script src="res.js"></script>
+</body>
+</html>

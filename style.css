@@ -1,0 +1,1204 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+:root{
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    /* NEUTAL COLORS */
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Light-blue);
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    background: var(--White);
+    width: 1000px;
+    height: 598px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.control_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 274px;
+    height: 568px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.stepsA{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    background: var(--Light-blue);
+    color: var(--Marine-blue);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.stepsB,
+.stepsC,
+.stepsD{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    color: var(--White);
+    border: solid 1px var(--Light-blue);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.stepsA:hover,
+.stepsB:hover,
+.stepsC:hover,
+.stepsD:hover{
+    cursor: pointer;
+    background: var(--Light-blue);
+    color: var(--Marine-blue);
+}
+
+.stepsA.deFault,
+.stepsB.deFault,
+.stepsC.deFault,
+.stepsD.deFault{
+    background: none;
+    color: var(--White);
+    border: solid 1px var(--Light-blue);
+}
+
+.control_1 button.indicate,
+.control_2 button.indicate,
+.control_3 button.indicate,
+.control_4 button.indicate{
+    background-color: var(--Light-blue);
+    color: var(--Marine-blue);
+}
+
+
+.control_1,
+.control_2,
+.control_3,
+.control_4{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.steps_labee{
+    list-style-type: none;
+}
+
+.steps_labee li:nth-child(1){
+    color: var(--Cool-gray);
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+.steps_labee li:nth-child(2){
+    color: var(--White);
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+/* FORM SECTION STARTS HERE */
+
+.form_section{
+    height: 568px;
+    width: 100%;
+}
+
+.centering_form{
+    display: flex;
+    justify-content: center;
+}
+
+.form_section.success{
+    display: none;
+}
+
+.form_section.present {
+    display: block;
+}
+
+#head1{
+    margin-top: 50px;
+    color: var(--Marine-blue);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+label{
+    color: var(--Marine-blue);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+#description_for_form1{
+    color: var(--Cool-gray);
+    margin: 15px 0  40px 0;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.label_e{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.label_e label{
+    color: var(--Marine-blue);
+}
+
+#error_messn,
+#error_messm,
+#error_messp{
+    display: none;
+    color: var(--Strawberry-red);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.namecontrol,
+.mailcontrol,
+.numbercontrol{
+    margin-top: 20px;
+}
+
+.namecontrol input,
+.mailcontrol input,
+.numbercontrol input{
+    width: 450px;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    border: solid 1px var(--Cool-gray);
+    border-radius: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+#fullName.error,
+#mAIL.error,
+#number.error{
+    border-color: var(--Strawberry-red);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.namecontrol input:focus,
+.mailcontrol input:focus,
+.numbercontrol input:focus{
+    outline: 0;
+    border-color: var(--Marine-blue);
+    color: var(--Marine-blue);
+}
+
+.next_button_container{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    width: 450px;
+    margin-top: 100px;
+}
+
+#exit-step1{
+    width: 100px;
+    background: var(--Marine-blue);
+    color: var(--White);
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+#exit-step1:hover{
+    cursor: pointer;
+}
+
+/* FORM SECTION ENDS HERE */
+
+
+
+/* STEP 2 STARTS HERE */
+
+.step-two{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.step-two.start2{
+    display: flex;
+}
+
+.step-two.goback{
+    display: none;
+}
+
+#plans_head{
+    color: var(--Marine-blue);
+    font-size: 32px;
+    margin: 50px 0  20px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#options{
+    color: var(--Cool-gray);
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.plans_container{
+    display: flex; 
+    gap: 15px;
+    width: 450px;
+    height: 170px;
+}
+
+.plans_container.yEaRlyS{
+    height: auto;
+}
+
+.two_options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 200px;
+    height: 170px;
+    border: solid 1px var(--Cool-gray);
+    border-radius: 8px;
+}
+
+.two_options.yearly{ 
+   height: 200px;
+}
+
+.plans_container img{
+    width: 40px;
+    height: 40px;
+}
+
+.two_options:hover{
+    cursor: pointer;
+}
+
+.ops{
+    border-color: var(--Marine-blue);
+    background-color: var(--Magnolia);
+}
+
+.chosenbackground{
+    background: var(--Magnolia);
+}
+
+.name_price1,
+.name_price2,
+.name_price3{
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.plans_container ul li:nth-child(1){
+    font-size: 16px;
+    color: var(--Marine-blue);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+
+}
+
+.plans_container ul li:nth-child(2){
+    margin-top: 8px;
+    color: var(--Cool-gray);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+#freeAc,
+#freeAd,
+#pRo{
+    color: var(--Marine-blue);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.duration_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--Magnolia);
+    height: 50px;
+    width: 450px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.monthtly_step2{
+    color: var(--Marine-blue);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.yearly_step2{
+    color: var(--Cool-gray);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+.swither_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50px;
+    background: var(--Marine-blue);
+}
+
+#month_button{
+    width: 15px;
+    height: 15px;
+    background: var(--White);
+    border: none;
+    border-radius: 50%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#yearly_button{
+    width: 15px;
+    height: 15px;
+    background: var(--Marine-blue);
+    border: none;
+    border-radius: 50%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.choseperiod:hover{
+    cursor: pointer;
+}
+
+.switch_step1_or_tep2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 80px;
+    margin-top: 90px;
+}
+
+.switch_step1_or_tep2.change-YeArLy{
+    margin-top: 60px;
+} 
+
+#back_to_one{
+    border: none;
+    width: 80px;
+    background: none;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: var(--Cool-gray);
+}
+
+#back_to_one:hover{
+    cursor: pointer;
+    color: var(--Marine-blue);
+}
+
+#to_step_three{
+    background: var(--Marine-blue);
+    color: var(--White);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+#to_step_three:hover{
+    cursor: pointer;
+}
+
+/* STEP THREE STARTS HERE */
+
+.ADS-ON{
+    display: none;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.ADS-ON.out{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ads-on_head{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 30px 0 20px 0;
+    color: var(--Marine-blue);
+}
+
+#ads-on-benefit{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Cool-gray);
+    font-size: 16px;
+    padding: 20px 0 30px 0;
+}
+
+.oPtions_container{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    row-gap: 10px;
+}
+
+.online_service,
+.large_storage,
+.costimizable{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 80px;
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 1px var(--Light-gray);
+}
+
+.online_service:hover,
+.large_storage:hover,
+.costimizable:hover{
+    cursor: pointer;
+}
+
+.online_service.selected,
+.large_storage.selected,
+.costimizable.selected{
+    background: var(--Magnolia);
+    border: solid 1px var(--Marine-blue);
+}
+
+.online_service.unselected,
+.large_storage.unselected,
+.costimizable.unselected{
+    background: none;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.inner ul{
+    list-style-type: none;
+}
+
+.mark_divA,
+.mark_divB,
+.mark_divC{
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: solid 1px var(--Light-gray);
+}
+
+.mark_divA.marked,
+.mark_divB.marked,
+.mark_divC.marked{
+   background: var(--Purplish-blue);
+}
+
+.o_service li:nth-child(1),
+.l_storage li:nth-child(1),
+.l_customizable_p li:nth-child(1){
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Marine-blue);
+    font-weight: 500;
+}
+
+.o_service li:nth-child(2),
+.l_storage li:nth-child(2),
+.l_customizable_p li:nth-child(2){
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--Cool-gray);
+    font-weight: 500;
+}
+
+#step_3_cost,
+#step_3_costLS,
+#step_3_costC{
+    font-family: 'Ubuntu', sans-serif;
+    color: VAR(--Pastel-blue);
+    font-size: 16PX;
+    font-weight: 500;
+}
+
+.step_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    margin-top: 100px;
+}
+
+#back_to_2{
+    width: auto;
+    height: 20px;
+    background: none;
+    color: var(--Cool-gray);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#next_from_three{
+    width: 80px;
+    height: 35px;
+    background: var(--Marine-blue);
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+}
+
+#back_to_2,
+#next_from_three{
+    cursor: pointer;
+}
+
+/* STEP THREE STARTS HERE */
+
+.step4.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step4{
+    display: none; 
+    height: 100%;
+    width: 100%;
+}
+
+.step4.next{
+    display: none
+}
+
+.step4 h4{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: var(--Marine-blue);
+    font-size: 32px;
+    padding: 30px 0 20px 0;
+}
+
+#check_instruction{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Cool-gray);
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.filled_selected_for_all_steps{
+    background: var(--Magnolia);
+    width: 450px;
+    height: 120px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.filled_selected_for_all_steps.two{
+    height: 160px;
+}
+
+.filled_selected_for_all_steps.three{
+    height: 210px;
+} 
+
+.selected_plans{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: solid 2px var(--Magnolia);
+    height: 60px;
+}
+
+.plsns_coNTainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#specp,
+#pLaN,
+#pLaN_PrIcE{
+    font-family: 'Ubuntu', sans-serif;
+    color:  var(--Marine-blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.selected_plans a{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Cool-gray);
+    font-size: 16px;
+}
+
+.services,
+.storage_selected,
+.customiZe_selected{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+}
+
+#retriever1,
+#retriever2,
+#retriever3{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--Cool-gray);
+}
+
+#service_price,
+#storage_price,
+#cus_pRICE{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Marine-blue);
+    font-size: 16px;
+}
+
+.centeringdiv{
+   display: flex;
+   justify-content: center;
+    margin-top: 20px;
+}
+
+.total_cost_container{
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.total_cost_container p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--Cool-gray);
+    font-weight: 500;
+}
+
+.next_to_final_or_back_button_container{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin-top: 100px;
+}
+
+#total_cost_price{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--Purplish-blue);
+    font-weight: 700;
+}
+
+#bact_to_three{
+    color: var(--Cool-gray);
+    border: none;
+    background: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#bact_to_three:hover{
+    cursor: pointer;
+}
+
+#to_summary{
+    background: var(--Purplish-blue);
+    color: var(--White);
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#to_summary:hover{
+    cursor: pointer;
+}
+
+/* LAST STEP STARTS HERE */
+
+.final.show{
+    display: block;
+}
+
+.iconcontainer{
+    margin-bottom: 30px;
+}
+
+.final{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.final.show{
+    display: flex;
+}
+
+.iconcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+h5{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Marine-blue);
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+.final p{
+    display: block;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--Cool-gray);
+    text-align: center;
+    width: 450px;
+}
+
+.attribution{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    bottom: 20px;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width: 420px){
+
+    html{
+        height: auto;
+        width: 100vw;
+    }
+   
+    body{
+        display: block;
+        width: 375px;
+        height: 100vh;
+        background: var(--Magnolia);
+    }
+
+    main{
+        display: block;
+        justify-content: center;
+        align-items: first baseline;
+        width: 375px;
+        padding: 0;
+        background: none;
+    }
+
+    .control_container{
+        flex-direction: row;
+        justify-content: center;
+        background-image: url("./assets/images/bg-sidebar-mobile.svg");
+        height: 200px;
+        width: 375px;
+        gap: 15px;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .control_1,
+    .control_2,
+    .control_3,
+    .control_4{
+        height: 100px;
+    }
+
+    .control_1 button,
+    .control_2 button,
+    .control_3 button,
+    .control_4 button{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .steps_labee{
+        display: none;
+    }
+
+    .form_section{
+        display: block;
+        margin: 0 auto;
+        width: 375px;
+        height: auto;
+        padding: 0;
+    } 
+
+    .formField{
+        display: block;
+        margin: 0 auto;
+        background-color: var(--White);
+        width: 340px;
+        height: 380px;
+        padding: 30px 20px 20px 20px;
+        z-index: 2;
+        position: relative;
+        top: -90px;
+        border-radius: 10px;
+    }
+
+    #head1{
+        margin-top: 0;
+    }
+
+    #description_for_form1{
+        width: 240px;
+        margin: 15px 0 20px 0;
+    }
+
+    .label_e{
+        width: 100%;
+    }
+
+    .namecontrol,
+    .mailcontrol,
+    .numbercontrol{
+        margin-top: 20px;
+    }
+
+    .namecontrol input,
+    .mailcontrol input,
+    .numbercontrol input{
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .next_button_container{
+       
+        background-color: var(--White);
+        width: 375px;
+        height: 80px;
+        margin-top: 20px;
+        padding: 20px 15px 20px 15px;
+    }
+
+    #exit-step1{
+        width: 90px;
+        background: var(--Marine-blue);
+        color: var(--White);
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .step-two{
+        width: 375px;
+        height: auto;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .selectionfield{
+        display: block;
+        background-color: var(--White);
+        width: 340px;
+        height: auto;
+        position: relative;
+        padding: 30px 20px 20px 20px;
+        z-index: 2;
+        top: -90px;
+        margin-bottom: -150px; 
+        border-radius: 10px;
+    }
+
+    .selectionfield.year{
+        height: 570px;
+    }
+
+    #plans_head{
+        margin: 0 0  10px 0;
+    }
+
+    #options{
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    .plans_container{
+        width: 345px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .two_options{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        width: 300px;
+        height: 80px;
+        border-radius: 5px;
+    }
+
+    .two_options.yearly{
+        height: 100px;
+    }
+
+    .duration_container{
+        height: 50px;
+        width: 300px;
+        border-radius: 5px;
+    }
+
+    .duration_container.year{
+        margin-top: 20px;
+    }
+
+    .switch_step1_or_tep2{
+        background-color: var(--White);
+        width: 100vw;
+        height: 60px; 
+        padding: 0 20px 0 20px;
+    }
+
+    .switch_step1_or_tep2.change-YeArLy{
+        margin-top: 90px;
+    } 
+
+    #back_to_one,
+    #to_step_three{
+        height: 40px;
+        border-radius: 5px;
+        width: 100px;
+    }
+
+    .ADS-ON{
+        display: none;
+        height: auto;
+        width: 375px;
+        padding: 0;
+    }
+
+    .adsonselectionField{
+        display: block;
+        margin: 0 auto;
+        background-color: var(--White);
+        width: 340px;
+        height: 400px;
+        padding: 30px 20px 20px 20px;
+        z-index: 2;
+        position: relative; 
+        top: -90px;
+        border-radius: 10px;
+    }
+
+    .oPtions_container{
+        width: 300px;
+    }
+
+    
+    .selected_plans{
+        height: 100px;
+    }
+
+    .online_service,
+    .large_storage,
+    .costimizable{
+        width: 300px;
+        height: 60px;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    #ads-on_head{
+        padding: 0;
+    }
+
+    .o_service li:nth-child(2),
+    .l_storage li:nth-child(2),
+    .l_customizable_p li:nth-child(2){
+         font-size: 12px;
+         font-weight: 500;
+        }
+
+        #step_3_cost,
+        #step_3_costLS,
+        #step_3_costC{
+            font-family: 'Ubuntu', sans-serif;
+            color: VAR(--Pastel-blue);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+
+    .step_button{
+        width: 100vw;
+        background-color: var(--White);
+        height: 80px;
+        padding: 0 20px 0 20px;
+        margin-top: 0;
+    }
+
+    .step4{
+        height: auto;
+    }
+
+    .summaryOfselection{
+        display: block;
+        margin: 0 auto;
+        background-color: var(--White);
+        width: 340px;
+        height: 360px;
+        padding: 30px 20px 20px 20px;
+        z-index: 2;
+        position: relative;
+        top: -90px; 
+        border-radius: 10px;
+    }
+
+    .summaryOfselection.three{
+        height: 390px;
+    }
+
+    .step4 h4{
+        padding: 0;
+
+    }
+
+    #check_instruction{
+        padding-bottom: 20px;
+        line-height: 20px;
+    }
+
+    .filled_selected_for_all_steps{
+        width: 300px;
+        height: 170px;
+    }
+
+    .filled_selected_for_all_steps.two{
+        height: 180px;
+    }
+
+    .filled_selected_for_all_steps.three{
+        height: 210px;
+    } 
+
+    .services,
+    .storage_selected,
+    .customiZe_selected{
+        height: 30px;
+    }
+
+    .total_cost_container{
+        width: 270px;
+    }
+
+    .next_to_final_or_back_button_container{
+        background-color: var(--White);
+        height: 70px;
+        padding: 15px;
+        width: 100vw;
+      
+    }
+
+    #to_summary{
+        border-radius: 5px;
+    }
+
+    .final{
+        width: 100vw;
+        height: auto;
+    }
+
+    .summary_Holder{
+        display: block;
+        margin: 0 auto;
+        background-color: var(--White);
+        width: 340px;
+        height: 360px;
+        padding: 30px 20px 20px 20px;
+        z-index: 2;
+        position: relative;
+        bottom: 100px; 
+        border-radius: 10px;
+    }
+
+    .final p{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .attribution{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+}
